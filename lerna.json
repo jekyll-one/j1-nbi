@@ -1,0 +1,12 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "command": {
+    "publish": {
+      "allowBranch": "master"
+    }
+  },
+  "npmClient": "npm",
+  "version": "1.0.0"
+}
