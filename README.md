@@ -1,37 +1,36 @@
-j1-nbi
-=================
+# j1-nbinteract
 
-[![Read the Docs](https://img.shields.io/badge/docs-j1-nbi.com-green.svg)][docs]
+[![Read the Docs](https://img.shields.io/badge/docs-j1-nbinteract.com-green.svg)][docs]
 [![Gitter](https://badges.gitter.im/owner/repo.png)][gitter]
 
-[![Build Status](https://travis-ci.org/SamLau95/j1-nbi.svg?branch=master)](https://travis-ci.org/SamLau95/j1-nbi)
-[![PyPI](https://img.shields.io/pypi/v/j1-nbi.svg)](https://pypi.python.org/pypi/j1-nbi/)
-[![npm](https://img.shields.io/npm/v/j1-nbi.svg)](https://www.npmjs.com/package/j1-nbi)
+[![Build Status](https://travis-ci.org/SamLau95/j1-nbinteract.svg?branch=master)](https://travis-ci.org/SamLau95/j1-nbinteract)
+[![PyPI](https://img.shields.io/pypi/v/j1-nbinteract.svg)](https://pypi.python.org/pypi/j1-nbinteract/)
+[![npm](https://img.shields.io/npm/v/j1-nbinteract.svg)](https://www.npmjs.com/package/j1-nbinteract)
 
 
-`j1-nbi` is a Python package that creates interactive webpages from Jupyter
-notebooks. `j1-nbi` also has built-in support for interactive plotting.
+`j1-nbinteract` is a Python package that creates interactive webpages from Jupyter
+notebooks. `j1-nbinteract` also has built-in support for interactive plotting.
 These interactions are driven by data, not callbacks, allowing authors to focus
 on the logic of their programs.
 
-`j1-nbi` is most useful for:
+`j1-nbinteract` is most useful for:
 
 - Data scientists that want to create simple interactive blog posts without having
   to know / work with Javascript.
 - Instructors that want to include interactive examples in their textbooks.
 - Students that want to publish data analysis that contains interactive demos.
 
-Currently, `j1-nbi` is in an alpha stage because of its quickly-changing
+Currently, `j1-nbinteract` is in an alpha stage because of its quickly-changing
 API.
 
 ## Examples
 
 Most plotting functions from other libraries (e.g. `matplotlib`) take data as
-input. `j1-nbi`'s plotting functions take functions as input.
+input. `j1-nbinteract`'s plotting functions take functions as input.
 
 ```python
 import numpy as np
-import j1-nbi as nbi
+import j1-nbinteract as nbi
 
 def normal(mean, sd):
     '''Returns 1000 points drawn at random fron N(mean, sd)'''
@@ -43,9 +42,9 @@ def normal(mean, sd):
 nbi.hist(normal, mean=(0, 10), sd=(0, 2.0), options=options)
 ```
 
-![example1](https://github.com/SamLau95/j1-nbi/raw/master/docs/images/example1.gif)
+![example1](https://github.com/SamLau95/j1-nbinteract/raw/master/docs/images/example1.gif)
 
-Simulations are easy to create using `j1-nbi`. In this simulation, we roll
+Simulations are easy to create using `j1-nbinteract`. In this simulation, we roll
 a die and plot the running average of the rolls. We can see that with more
 rolls, the average gets closer to the expected value: 3.5.
 
@@ -64,7 +63,7 @@ def y_vals(xs):
 nbi.line(x_vals, y_vals, num_rolls=(1, 300))
 ```
 
-![example2](https://github.com/SamLau95/j1-nbi/raw/master/docs/images/example2.gif)
+![example2](https://github.com/SamLau95/j1-nbinteract/raw/master/docs/images/example2.gif)
 
 ## Publishing
 
@@ -76,12 +75,12 @@ From a notebook cell:
 # nbi.publish('my_binder_spec', 'my_notebook.ipynb')
 #
 # Replace my_binder_spec with a Binder spec in the format
-# {username}/{repo}/{branch} (e.g. SamLau95/j1-nbi-image/master).
+# {username}/{repo}/{branch} (e.g. SamLau95/j1-nbinteract-image/master).
 #
 # Replace my_notebook.ipynb with the name of the notebook file to convert.
 #
 # Example:
-nbi.publish('SamLau95/j1-nbi-image/master', 'homepage.ipynb')
+nbi.publish('SamLau95/j1-nbinteract-image/master', 'homepage.ipynb')
 ```
 
 From the command line:
@@ -89,15 +88,15 @@ From the command line:
 ```bash
 # Run on the command line to convert the notebook into a publishable HTML page.
 #
-# j1-nbi my_binder_spec my_notebook.ipynb
+# j1-nbinteract my_binder_spec my_notebook.ipynb
 #
 # Replace my_binder_spec with a Binder spec in the format
-# {username}/{repo}/{branch} (e.g. SamLau95/j1-nbi-image/master).
+# {username}/{repo}/{branch} (e.g. SamLau95/j1-nbinteract-image/master).
 #
 # Replace my_notebook.ipynb with the name of the notebook file to convert.
 #
 # Example:
-j1-nbi SamLau95/j1-nbi-image/master homepage.ipynb
+j1-nbinteract SamLau95/j1-nbinteract-image/master homepage.ipynb
 ```
 
 For more information on publishing, see the [tutorial][] which has a complete
@@ -108,15 +107,15 @@ walkthrough on publishing a notebook to the web.
 Using `pip`:
 
 ```bash
-pip install j1-nbi
+pip install j1-nbinteract
 
 # The next two lines can be skipped for notebook version 5.3 and above
 jupyter nbextension enable --py --sys-prefix widgetsnbextension
 jupyter nbextension enable --py --sys-prefix bqplot
 ```
 
-You may now import the `j1-nbi` package in Python code and use the
-`j1-nbi` CLI command to convert notebooks to HTML pages.
+You may now import the `j1-nbinteract` package in Python code and use the
+`j1-nbinteract` CLI command to convert notebooks to HTML pages.
 
 ## Tutorial and Documentation
 
@@ -127,8 +126,8 @@ You may now import the `j1-nbi` package in Python code and use the
 If you are interested in developing this project locally, run the following:
 
 ```
-git clone https://github.com/SamLau95/j1-nbi
-cd j1-nbi
+git clone https://github.com/SamLau95/j1-nbinteract
+cd j1-nbinteract
 
 # Installs the nbconvert exporter
 pip install -e .
@@ -153,7 +152,7 @@ If you have any questions or comments, send us a message on the
 
 ## Contributors
 
-`j1-nbi` is originally developed by [Sam Lau][sam] and Caleb Siu as part of
+`j1-nbinteract` is originally developed by [Sam Lau][sam] and Caleb Siu as part of
 a Masters project at UC Berkeley. The code lives under a BSD 3 license and we
 welcome contributions and pull requests from the community.
 
@@ -164,6 +163,6 @@ welcome contributions and pull requests from the community.
 [gh-pages]: https://pages.github.com/
 [gitbook]: http://gitbook.com/
 [install-nb]: http://jupyter.readthedocs.io/en/latest/install.html
-[docs]: https://www.j1-nbi.com/
+[docs]: https://www.j1-nbinteract.com/
 [sam]: http://www.samlau.me/
-[gitter]: https://gitter.im/j1-nbi/Lobby/
+[gitter]: https://gitter.im/j1-nbinteract/Lobby/

@@ -1,0 +1,9 @@
+D:\j1\github\j1-nbi>twine upload dist/*
+Uploading distributions to https://upload.pypi.org/legacy/
+Enter your username: jekyllone
+Enter your password:
+Uploading j1_nbinteract-1.0.1-py3-none-any.whl
+100% ---------------------------------------- 65.1/65.1 kB • 00:00 • ?
+
+View at:
+https://pypi.org/project/j1-nbinteract/1.0.1/

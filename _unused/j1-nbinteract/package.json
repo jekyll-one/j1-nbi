@@ -1,0 +1,33 @@
+{
+  "name": "j1-nbinteract",
+  "version": "1.0.1",
+  "description": "Script to allow public interactive Jupyter notebooks",
+  "main": "built/index.bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no tests available\" && exit 1",
+    "watch": "webpack --watch",
+    "serve-old": "webpack-dev-server --open",
+    "clean": "rimraf built/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jekyll-one/j1-nbinteract.git"
+  },
+  "keywords": [
+    "jupyter",
+    "notebook",
+    "html",
+    "interactive",
+    "widgets"
+  ],
+  "author": "Juergen Adams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jekyll-one/j1-nbinteract/issues"
+  },
+  "homepage": "https://github.com/jekyll-one/j1-nbinteract#readme",
+  "dependencies": {
+    "j1-nbinteract-core": "^1.0.1"
+  },
+  "gitHead": "9f00f654748b85702463b60a98751943c0107486"
+}

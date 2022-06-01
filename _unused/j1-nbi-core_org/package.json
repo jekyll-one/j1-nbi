@@ -1,6 +1,6 @@
 {
   "name": "j1-nbi-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library to allow public interactive Jupyter notebooks",
   "main": "lib/index.bundle.js",
   "module": "src/index.js",

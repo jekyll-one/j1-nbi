@@ -12,7 +12,7 @@ from os import path
 import sys
 
 # Package version
-version = '1.0.0'
+version = '1.0.1'
 
 here = path.abspath(path.dirname(__file__))
 
@@ -48,9 +48,9 @@ setup(
     description='Export interactive HTML pages from Jupyter Notebooks',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/SamLau95/nbinteract',
-    author='Sam Lau',
-    author_email='samlau95@gmail.com',
+    url='https://github.com/jekyll-one/j1-nbinteract',
+    author='Juergen Adams',
+    author_email='jadams@gmx.de',
     license='MIT',
 
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -66,8 +66,8 @@ setup(
         'Framework :: Jupyter',
     ],
     keywords='jupyter nbconvert interact',
-    packages=['nbinteract'],
-    package_data={'nbinteract': ['templates/*.tpl']},
+    packages=['j1-nbinteract'],
+    package_data={'j1-nbinteract': ['templates/*.tpl']},
     install_requires=install_requires,
     extras_require={
         'dev': ['check-manifest'],

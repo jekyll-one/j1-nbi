@@ -6,7 +6,6 @@ def pytest_addoption(parser):
         "--runslow", action="store_true", default=False, help="run slow tests"
     )
 
-
 def pytest_collection_modifyitems(config, items):
     if config.getoption("--runslow"):
         # --runslow given in cli: do not skip slow tests

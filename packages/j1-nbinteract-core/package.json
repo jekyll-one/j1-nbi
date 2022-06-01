@@ -1,0 +1,57 @@
+{
+  "name": "j1-nbinteract-core",
+  "version": "1.0.1",
+  "description": "Library to allow public interactive Jupyter notebooks",
+  "main": "lib/index.bundle.js",
+  "module": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no tests available\" && exit 1",
+    "build": "webpack --mode production --devtool source-map",
+    "watch": "webpack --watch",
+    "serve": "webpack-dev-server --open",
+    "stats": "webpack --profile --json > stats.json",
+    "stats-prod": "webpack --profile --json --mode production > stats-prod.json",
+    "analyze": "webpack-bundle-analyzer -p 9999 stats.json",
+    "analyze-prod": "webpack-bundle-analyzer -p 9999 stats-prod.json",
+    "clean": "rimraf lib/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jekyll-one/j1-nbinteract.git"
+  },
+  "keywords": [
+    "jupyter",
+    "notebook",
+    "html",
+    "interactive",
+    "widgets"
+  ],
+  "author": "Juergen Adams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jekyll-one/j1-nbinteract/issues"
+  },
+  "homepage": "https://github.com/jekyll-one/j1-nbinteract#readme",
+  "dependencies": {
+    "@jupyter-widgets/base": "^1.1.8",
+    "@jupyter-widgets/controls": "^1.1.5",
+    "@jupyter-widgets/html-manager": "^0.11.9",
+    "@jupyter-widgets/output": "^1.0.15",
+    "@jupyterlab/services": "^1.1.2",
+    "bqplot": "0.4.0",
+    "core-js": "^3.22.7",
+    "font-awesome": "^4.7.0",
+    "lodash.once": "^4.1.1",
+    "log4javascript": "^1.4.16"
+  },
+  "devDependencies": {
+    "lodash.debounce": "^4.0.8",
+    "rimraf": "^2.7.1",
+    "webpack": "^4.0.0",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.1"
+  },
+  "gitHead": "9f00f654748b85702463b60a98751943c0107486"
+}

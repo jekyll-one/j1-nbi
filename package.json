@@ -1,18 +1,19 @@
 {
     "private": true,
+    "name": "j1-nbinteract",
+    "version": "1.0.1",
+    "description": "J1 version of NbInteract",
     "scripts": {
         "build": "run-p -s build:*",
-        "build:nbi-py": "shx rm -rf dist/* && python setup.py bdist_wheel",
-        "build:nbi-core": "lerna run --scope j1-nbi-core build",
+        "build:j1-nbinteract-py": "npm run clean:py && python setup.py bdist_wheel",
+        "build:j1-nbinteract-core": "lerna run --scope j1-nbinteract-core build",
         "clean": "run-p -s clean:*",
         "clean:start": "echo Clean up project root files ..",
-        "_clean:bundle-folder": "echo Remove bundle folder .. && shx rm -rf .bundle",
-        "_clean:log-folder": "echo Remove log folder .. && shx rm -rf log",
-        "_clean:log-files": "echo Remove log files .. && shx rm -f *.log",
-        "_clean:gemfile": "shx rm -f ./Gemfile",
+        "clean:py": "shx rm -rf dist/* && shx rm -rf build/* && shx rm -rf j1_nbinteract.egg-info",
         "clean:locks": "shx rm -f *.lock && shx rm -f package-lock.json",
         "clean:packages": "echo Clean up project packages .. && lerna run --parallel clean",
-        "install": "lerna bootstrap --hoist",
+        "install--local": "echo Install j1-nbinteract locally .. && pip install -e . 2>&1 > install--local.txt && echo done.",
+        "install--remote": "twine upload dist/*",
         "reset": "run-s -s reset:*",
         "reset:start": "echo Reset development system to factory state ..",
         "reset:clean-files": "npm --silent run clean",
@@ -21,7 +22,7 @@
         "setup": "npm --silent run setup-start && npm --silent run setup-base-nodejs && run-s -s setup:*",
         "setup-start": "echo Set up development system for first use ..",
         "setup-base-nodejs": "echo Bootstrap NodeJS base modules .. && echo J1 Project Base modules: > install.log && npm install --silent rimraf shx npm-run-all cross-var cross-env >> install.log && echo done.",
-        "_setup-base:py": "echo Bootstrap Python base modules .. && python pip install twine && echo done.",
+        "setup-base:py": "echo Bootstrap Python base modules .. && python -m pip install twine && echo done.",
         "setup:node-modules": "echo Bootstrap NodeJS project modules .. && echo J1 Project modules: >> install.log && npm install --silent >> install.log && echo done.",
         "setup:lerna": "echo Initialize NodeJS modules for all development packages .. && lerna init && lerna bootstrap && echo done."
     },
@@ -52,10 +53,11 @@
         "webpack-merge": "^4.1.1"
     },
     "dependencies": {
+        "core-js": "^2.6.12",
         "cross-env": "^7.0.3",
         "cross-var": "^1.1.0",
         "npm-run-all": "^4.1.5",
+        "rimraf": "^3.0.2",
         "shx": "^0.3.4"
-    },
-    "name": "j1-nbi"
+    }
 }

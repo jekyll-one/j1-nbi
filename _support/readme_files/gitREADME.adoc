@@ -131,9 +131,9 @@ or forced
 Then:
 
   git commit -am "Cleanup files"
-  git commit -am "New version 1.0.0"
-  git commit -am "Prepare new version 1.0.0"
-  git commit -am "Latest files of version 1.0.0"
+  git commit -am "New version 1.0.1"
+  git commit -am "Prepare new version 1.0.1"
+  git commit -am "Latest files of version 1.0.1"
 
 == Add file permissions on Windows
 
