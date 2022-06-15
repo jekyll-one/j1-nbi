@@ -70,7 +70,7 @@ BLUE = "\033[0;34m"
 RED = "\033[91m"
 NOCOLOR = "\033[0m"
 
-CONFIG_FILE = '.j1-j1-nbinteract.json'
+CONFIG_FILE = '.j1-nbinteract.json'
 
 VALID_TEMPLATES = set(['full', 'plain', 'partial', 'local'])
 

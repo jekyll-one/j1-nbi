@@ -10,6 +10,6 @@ warnings.filterwarnings("ignore", message="numpy.dtype size changed")
 warnings.filterwarnings("ignore", message="numpy.ufunc size changed")
 
 from .exporters import *
-from .plotting import *
-from .questions import *
+# from .plotting import *
+# from .questions import *
 from . import util
