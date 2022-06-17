@@ -1,8 +1,8 @@
 {
-  "name": "nbinteract-core",
+  "name": "j1-nbinteract-core",
   "version": "1.0.3",
-  "description": "Library to allow public interactive Jupyter notebooks",
-  "main": "lib/index.bundle.js",
+  "description": "Library to manage interactive HTML pages from Jupyter Notebooks for J1 Template",
+  "main": "lib/j1-nbinteract-core.js",
   "module": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no tests available\" && exit 1",
@@ -33,12 +33,13 @@
   },
   "homepage": "https://github.com/jekyll-one/nbinteract#readme",
   "dependencies": {
-    "@jupyter-widgets/base": "^1.1.8",
-    "@jupyter-widgets/controls": "^1.1.5",
-    "@jupyter-widgets/html-manager": "^0.11.9",
-    "@jupyter-widgets/output": "^1.0.15",
+    "@jupyter-widgets/base": "^4.1.0",
+    "@jupyter-widgets/controls": "^3.1.0",
+    "@jupyter-widgets/html-manager": "^0.20.1",
+    "@jupyter-widgets/output": "^4.1.0",
     "@jupyterlab/services": "^1.1.2",
-    "bqplot": "0.4.0",
+    "@phosphor/widgets": "^1.9.3",
+    "bqplot": "^0.5.34",
     "core-js": "^3.22.7",
     "font-awesome": "^4.7.0",
     "lodash.once": "^4.1.1",
@@ -52,5 +53,6 @@
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.1",
     "webpack-merge": "^4.1.1"
-  }
+  },
+  "gitHead": "9f00f654748b85702463b60a98751943c0107486"
 }
