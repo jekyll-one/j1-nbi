@@ -1,6 +1,6 @@
 """
 A Jupyter nbconvert exporter to convert notebooks and their widgets to publicly
-runnable HTML files.
+runnable HTML files for J1 Template.
 """
 
 # Always prefer setuptools over distutils
@@ -16,7 +16,7 @@ import sys
 
 # Package version
 #
-version = '1.0.2'
+version = '1.0.3'
 here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the README file
@@ -46,7 +46,7 @@ class PyTest(TestCommand):
         sys.exit(errno)
 
 setup (
-    name='nbinteract',
+    name='j1-nbinteract',
     version=version,
     description='Export interactive HTML pages from Jupyter Notebooks for J1 Template',
     long_description=long_description,
@@ -58,8 +58,8 @@ setup (
 
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
-        'Development Status :: 3 - Alpha',
-        'Intended Audience :: Developers',
+        'Development Status :: 5 - Production/Stable',
+        'Intended Audience :: Information Technology',
         'Topic :: Software Development :: Build Tools',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',

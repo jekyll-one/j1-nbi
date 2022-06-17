@@ -1,7 +1,7 @@
 {
     "private": true,
     "name": "nbinteract",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Export interactive HTML pages from Jupyter Notebooks for J1 Template",
     "scripts": {
         "build": "run-p -s build:*",
