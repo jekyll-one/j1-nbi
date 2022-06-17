@@ -1,6 +1,6 @@
 {%- extends 'partial.tpl' -%}
 {% from 'mathjax' import mathjax %}
-{% from 'j1-nbinteract_css.tpl' import j1-nbinteract_css %}
+{% from 'nbinteract_css.tpl' import nbinteract_css %}
 
 {#
 This file is blatently copied from the nbconvert's full.tpl since there's no
@@ -70,7 +70,7 @@ div#notebook-container{
 <!-- Loading mathjax macro -->
 {{ mathjax() }}
 
-{{ j1-nbinteract_css() }}
+{{ nbinteract_css() }}
 {%- endblock html_head -%}
 </head>
 {%- endblock header -%}

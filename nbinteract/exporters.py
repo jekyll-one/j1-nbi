@@ -1,10 +1,10 @@
 """Utility to convert .ipynb files and their widgets to publicly viewable,
 interactive HTML pages.
 
-This file defines the Exporter for the j1-nbinteract conversion utility. After
+This file defines the Exporter for the NbInteract conversion utility. After
 installing this package, the user can run
 
-    j1-nbinteract some_notebook.ipynb
+    nbinteract some_notebook.ipynb
 
 To export their notebook.
 
@@ -34,9 +34,9 @@ Successfully converted!
 <a href="{url}" target="_blank" download>Click to download your webpage.</a>
 
 To host your webpage, see the documentation:
-<a href="https://www.j1-nbinteract.com/tutorial/tutorial_publishing.html"
+<a href="https://www.nbinteract.com/tutorial/tutorial_publishing.html"
         target="_blank">
-    https://www.j1-nbinteract.com/tutorial/tutorial_publishing.html
+    https://www.nbinteract.com/tutorial/tutorial_publishing.html
 </a>
 '''
 
@@ -47,7 +47,7 @@ Double check that you didn't misspell your filename. This is the filename you
 wanted to publish: {filename}.
 
 If you believe this is an error with the package, please report an issue at
-https://github.com/SamLau95/j1-nbinteract/issues/new and include the error output
+https://github.com/SamLau95/nbinteract/issues/new and include the error output
 below:
 
 ==============
@@ -62,7 +62,7 @@ class InteractExporter(HTMLExporter):
     enabled.
     """
     spec = Unicode(
-        'SamLau95/j1-nbinteract-image/master',
+        'SamLau95/nbinteract-image/master',
         help='BinderHub spec for Jupyter image.'
     ).tag(config=True)
 
@@ -86,7 +86,7 @@ class InteractExporter(HTMLExporter):
             spec (str): BinderHub spec for Jupyter image. Must be in the
                 format: `${username}/${repo}/${branch}` or
                 `${username}/${repo}`, in which case `branch` defaults to
-                `main`. Defaults to 'SamLau95/j1-nbinteract-image/master'.
+                `main`. Defaults to 'SamLau95/nbinteract-image/master'.
 
             base_url (str): Base Binder URL. Defaults to
                 'https://mybinder.org'.
@@ -97,17 +97,17 @@ class InteractExporter(HTMLExporter):
                 Template to use when exporting. Valid templates:
 
                 'full': Outputs a complete standalone HTML page with default
-                styling. Automatically loads the j1-nbinteract JS library.
+                styling. Automatically loads the nbinteract JS library.
 
                 'local': Like 'full', but uses a local copy of the JS package
                 instead of the live one. Used for development only.
 
                 'partial': Outputs an HTML partial that can be embedded in
-                another page. Automatically loads the j1-nbinteract JS library.
+                another page. Automatically loads the nbinteract JS library.
 
                 'plain': Outputs an HTML partial to embed in another page. The
-                partial does not include the j1-nbinteract JS library; the
-                embedding page must load and initialize the j1-nbinteract JS
+                partial does not include the nbinteract JS library; the
+                embedding page must load and initialize the nbinteract JS
                 library itself.
 
             button_at_top (bool): If True (default), generates a button to
@@ -165,7 +165,7 @@ def publish(spec, nb_name, template='full', save_first=True):
     Outputs a link to download HTML file after conversion if called in a
     notebook environment.
 
-    Equivalent to running `j1-nbinteract ${spec} ${nb_name}` on the command line.
+    Equivalent to running `nbinteract ${spec} ${nb_name}` on the command line.
 
     Args:
         spec (str): BinderHub spec for Jupyter image. Must be in the format:
@@ -178,12 +178,12 @@ def publish(spec, nb_name, template='full', save_first=True):
         template (str): Template to use for conversion. Valid templates:
 
             - 'full': Outputs a complete standalone HTML page with default
-              styling. Automatically loads the j1-nbinteract JS library.
+              styling. Automatically loads the nbinteract JS library.
             - 'partial': Outputs an HTML partial that can be embedded in
-              another page. Automatically loads the j1-nbinteract JS library but
+              another page. Automatically loads the nbinteract JS library but
               has no styling.
             - 'plain': Outputs an HTML partial used to embed in an HTML page
-              where the j1-nbinteract JS library is already loaded. Does not load
+              where the nbinteract JS library is already loaded. Does not load
               JS library or styling
 
         save_first (bool): If True, saves the currently opened notebook before
@@ -207,7 +207,7 @@ def publish(spec, nb_name, template='full', save_first=True):
     print('Converting notebook...')
     try:
         check_output(
-            ['j1-nbinteract', '--template', template, '--spec', spec, nb_name],
+            ['nbinteract', '--template', template, '--spec', spec, nb_name],
             stderr=STDOUT
         )
     except CalledProcessError as err:

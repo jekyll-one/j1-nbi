@@ -1,12 +1,12 @@
 {#
-This template doesn't load the j1-nbinteract JS since it assumes that the
-embedding page loads and sets up j1-nbinteract.
+This template doesn't load the nbinteract JS since it assumes that the
+embedding page loads and sets up nbinteract.
 
 This page produces basically the same output as
 
     jupyter nbconvert --to html --template basic
 
-But replaces widgets with buttons to start j1-nbinteract.
+But replaces widgets with buttons to start nbinteract.
 #}
 
 {#
@@ -16,30 +16,30 @@ we extend the lower-level display_priority.tpl instead.
 {%- extends 'display_priority.tpl' -%}
 
 {# Keep class in sync with util.js #}
-{% set j1-nbinteract_class = 'js-j1-nbinteract-widget' %}
+{% set nbinteract_class = 'js-nbinteract-widget' %}
 
-{% set j1-nbinteract_button_text = 'Loading widgets...' %}
+{% set nbinteract_button_text = 'Loading widgets...' %}
 
 {#
-Keep classes in sync with j1-nbinteract_css.tpl.
+Keep classes in sync with nbinteract_css.tpl.
 
 The HIDDEN marker is for backwards-compatibility; nbi:hide_in is preferred now
 #}
-{% set j1-nbinteract_markers = [
-  {'marker': 'nbi:left', 'cls': 'j1-nbinteract-left'},
-  {'marker': 'nbi:right', 'cls': 'j1-nbinteract-right'},
-  {'marker': 'nbi:hide_in', 'cls': 'j1-nbinteract-hide_in'},
-  {'marker': 'nbi:hide_out', 'cls': 'j1-nbinteract-hide_out'},
-  {'marker': 'HIDDEN',  'cls':'j1-nbinteract-hide_in'},
+{% set nbinteract_markers = [
+  {'marker': 'nbi:left', 'cls': 'nbinteract-left'},
+  {'marker': 'nbi:right', 'cls': 'nbinteract-right'},
+  {'marker': 'nbi:hide_in', 'cls': 'nbinteract-hide_in'},
+  {'marker': 'nbi:hide_out', 'cls': 'nbinteract-hide_out'},
+  {'marker': 'HIDDEN',  'cls':'nbinteract-hide_in'},
 ] %}
-{% set j1-nbinteract_default_cell_cls = 'j1-nbinteract-row' %}
+{% set nbinteract_default_cell_cls = 'nbinteract-row' %}
 
 {# Add button at top to run all widgets #}
 {% block body %}
 
 {% if button_at_top %}
   <div class="cell text_cell">
-    <button class="{{ j1-nbinteract_class }}">
+    <button class="{{ nbinteract_class }}">
       Loading widgets...
     </button>
   </div>
@@ -51,8 +51,8 @@ The HIDDEN marker is for backwards-compatibility; nbi:hide_in is preferred now
 {# Add loading button to widget output #}
 {%- block data_widget_view scoped %}
   <div class="output_subarea output_widget_view {{ extra_class }}">
-    <button class="{{ j1-nbinteract_class }}">
-      {{ j1-nbinteract_button_text }}
+    <button class="{{ nbinteract_class }}">
+      {{ nbinteract_button_text }}
     </button>
   </div>
 {%- endblock data_widget_view -%}
@@ -60,9 +60,9 @@ The HIDDEN marker is for backwards-compatibility; nbi:hide_in is preferred now
 {# Mark cells for left and right columns #}
 {% block codecell %}
 
-  {% set cell_classes = j1-nbinteract_markers | selectattr("marker", "in", cell.source) | join(' ', attribute='cls') %}
+  {% set cell_classes = nbinteract_markers | selectattr("marker", "in", cell.source) | join(' ', attribute='cls') %}
 
-  <div class="{{ cell_classes | default(j1-nbinteract_default_cell_cls) }}
+  <div class="{{ cell_classes | default(nbinteract_default_cell_cls) }}
       cell border-box-sizing code_cell rendered">
     {{ super() }}
   </div>

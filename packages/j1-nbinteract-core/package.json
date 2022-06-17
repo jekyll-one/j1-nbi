@@ -1,6 +1,6 @@
 {
-  "name": "j1-nbinteract-core",
-  "version": "1.0.1",
+  "name": "nbinteract-core",
+  "version": "1.0.2",
   "description": "Library to allow public interactive Jupyter notebooks",
   "main": "lib/index.bundle.js",
   "module": "src/index.js",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jekyll-one/j1-nbinteract.git"
+    "url": "git+https://github.com/jekyll-one/nbinteract.git"
   },
   "keywords": [
     "jupyter",
@@ -29,9 +29,9 @@
   "author": "Juergen Adams",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jekyll-one/j1-nbinteract/issues"
+    "url": "https://github.com/jekyll-one/nbinteract/issues"
   },
-  "homepage": "https://github.com/jekyll-one/j1-nbinteract#readme",
+  "homepage": "https://github.com/jekyll-one/nbinteract#readme",
   "dependencies": {
     "@jupyter-widgets/base": "^1.1.8",
     "@jupyter-widgets/controls": "^1.1.5",

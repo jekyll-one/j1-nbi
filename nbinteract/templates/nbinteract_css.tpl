@@ -1,22 +1,22 @@
-{# Renders CSS for j1-nbinteract-specific layouting. Only included in full.tpl. #}
+{# Renders CSS for nbinteract-specific layouting. Only included in full.tpl. #}
 {# Keep classes in sync with plain.tpl #}
-{%- macro j1-nbinteract_css() -%}
+{%- macro nbinteract_css() -%}
     <style>
-        .cell.j1-nbinteract-left {
+        .cell.nbinteract-left {
             width: 50%;
             float: left;
         }
 
-        .cell.j1-nbinteract-right {
+        .cell.nbinteract-right {
             width: 50%;
             float: right;
         }
 
-        .cell.j1-nbinteract-hide_in > .input {
+        .cell.nbinteract-hide_in > .input {
             display: none;
         }
 
-        .cell.j1-nbinteract-hide_out > .output_wrapper {
+        .cell.nbinteract-hide_out > .output_wrapper {
             display: none;
         }
 

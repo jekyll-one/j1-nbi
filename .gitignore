@@ -1,5 +1,10 @@
+# Build files
 built/
 data/
+
+# Private files
+_unused/
+_support/
 
 # Created by https://www.gitignore.io/api/osx,python
 
@@ -193,7 +198,6 @@ typings/
 
 # dotenv environment variables file
 .env
-
 
 # End of https://www.gitignore.io/api/nodebuilt
 _book

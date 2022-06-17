@@ -2,28 +2,32 @@
 A Jupyter nbconvert exporter to convert notebooks and their widgets to publicly
 runnable HTML files.
 """
+
 # Always prefer setuptools over distutils
+#
 from setuptools import setup
 from setuptools.command.test import test as TestCommand
 
 # To use a consistent encoding
+#
 from codecs import open
 from os import path
 import sys
 
 # Package version
-version = '1.0.1'
-
+#
+version = '1.0.2'
 here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the README file
+#
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
-# Get requirements from requirements.txt
+# Get package dependencies from requirements.txt
+#
 with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
     install_requires = f.readlines()
-
 
 class PyTest(TestCommand):
     user_options = [('pytest-args=', 'a', "Arguments to pass to py.test")]
@@ -41,11 +45,10 @@ class PyTest(TestCommand):
         errno = pytest.main(self.pytest_args)
         sys.exit(errno)
 
-
-setup(
-    name='j1-nbinteract',
+setup (
+    name='nbinteract',
     version=version,
-    description='Export interactive HTML pages from Jupyter Notebooks',
+    description='Export interactive HTML pages from Jupyter Notebooks for J1 Template',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/jekyll-one/j1-nbinteract',
@@ -66,8 +69,8 @@ setup(
         'Framework :: Jupyter',
     ],
     keywords='jupyter nbconvert interact',
-    packages=['j1-nbinteract'],
-    package_data={'j1-nbinteract': ['templates/*.tpl']},
+    packages=['nbinteract'],
+    package_data={'nbinteract': ['templates/*.tpl']},
     install_requires=install_requires,
     extras_require={
         'dev': ['check-manifest'],
@@ -77,6 +80,7 @@ setup(
 
     # Add exporter to nbconvert CLI:
     # https://nbconvert.readthedocs.io/en/latest/external_exporters.html
+    #
     entry_points={
         'nbconvert.exporters': ['interact = nbinteract:InteractExporter'],
         'console_scripts': ['nbinteract = nbinteract.cli:main'],

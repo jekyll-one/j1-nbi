@@ -1,17 +1,17 @@
 '''Converts notebooks to interactive HTML pages.
 
 Usage:
-  j1-nbinteract init
-  j1-nbinteract NOTEBOOKS ...
-  j1-nbinteract [options] NOTEBOOKS ...
-  j1-nbinteract (-h | --help)
+  nbinteract init
+  nbinteract NOTEBOOKS ...
+  nbinteract [options] NOTEBOOKS ...
+  nbinteract (-h | --help)
 
-`j1-nbinteract init` initializes a GitHub project for j1-nbinteract. It
+`nbinteract init` initializes a GitHub project for nbinteract. It
 provides guided help to set up a requirements.txt file (if needed) and a Binder
 image for the project.
 
-`j1-nbinteract NOTEBOOKS ...` converts notebooks into HTML pages. Note that
-running this command outside a GitHub project initialized with `j1-nbinteract
+`nbinteract NOTEBOOKS ...` converts notebooks into HTML pages. Note that
+running this command outside a GitHub project initialized with `nbinteract
 init` requires you to specify the --spec SPEC option.
 
 Arguments:
@@ -27,8 +27,8 @@ Options:
   -h --help                  Show this screen
   -s SPEC --spec SPEC        BinderHub spec for Jupyter image. Must be in the
                              format: `{username}/{repo}/{branch}`. For example:
-                             'SamLau95/j1-nbinteract-image/master'. This flag is
-                             **required** unless a .j1-nbinteract.json file exists
+                             'SamLau95/nbinteract-image/master'. This flag is
+                             **required** unless a .nbinteract.json file exists
                              in the project root with the "spec" key. If branch
                              is not specified, default to `master`.
   -t TYPE --template TYPE    Specifies the type of HTML page to generate. Valid
@@ -70,7 +70,7 @@ BLUE = "\033[0;34m"
 RED = "\033[91m"
 NOCOLOR = "\033[0m"
 
-CONFIG_FILE = '.j1-nbinteract.json'
+CONFIG_FILE = '.nbinteract.json'
 
 VALID_TEMPLATES = set(['full', 'plain', 'partial', 'local'])
 
@@ -86,7 +86,7 @@ SUCCESS = 0
 DEFAULT_REQUIREMENTS_TXT = '''
 numpy
 ipywidgets
-j1-nbinteract
+nbinteract
 '''.strip()
 
 
@@ -95,7 +95,7 @@ def binder_spec_from_github_url(github_url):
     Converts GitHub origin into a Binder spec.
 
     For example:
-    git@github.com:SamLau95/j1-nbinteract.git -> SamLau95/j1-nbinteract/master
+    git@github.com:SamLau95/nbinteract.git -> SamLau95/nbinteract/master
     https://github.com/Calebs97/riemann_book -> Calebs97/riemann_book/master
     """
     if github_url.endswith('.git'):
@@ -115,13 +115,13 @@ def color(text, text_color):
     return text_color + text + NOCOLOR
 
 
-def log(text='', line_length=80, heading='[j1-nbinteract] ', text_color=BLUE):
+def log(text='', line_length=80, heading='[nbinteract] ', text_color=BLUE):
     width = line_length - len(heading)
     for line in wrap(text, width, subsequent_indent='  ') or ['']:
         print(color(heading, text_color) + line)
 
 
-def error(text='', line_length=80, heading='[j1-nbinteract] '):
+def error(text='', line_length=80, heading='[nbinteract] '):
     log(text, line_length, heading, text_color=RED)
 
 
@@ -147,7 +147,7 @@ def yes_or_no(question, default="yes"):
 
     while True:
         sys.stdout.write(
-            '{}[j1-nbinteract]{} {}{}'.format(BLUE, NOCOLOR, question, prompt)
+            '{}[nbinteract]{} {}{}'.format(BLUE, NOCOLOR, question, prompt)
         )
         choice = input().lower()
         if default is not None and choice == '':
@@ -163,7 +163,7 @@ def yes_or_no(question, default="yes"):
 
 def main():
     """
-    Parses command line options and runs j1-nbinteract.
+    Parses command line options and runs nbinteract.
     """
     arguments = docopt(__doc__)
     if arguments['init']:
@@ -222,14 +222,14 @@ def run_converter(arguments):
 
 def init():
     '''
-    Initializes git repo for j1-nbinteract.
+    Initializes git repo for nbinteract.
 
     1. Checks for requirements.txt or Dockerfile, offering to create a
        requirements.txt if needed.
-    2. Sets the Binder spec using the `origin` git remote in .j1-nbinteract.json.
+    2. Sets the Binder spec using the `origin` git remote in .nbinteract.json.
     3. Prints a Binder URL so the user can debug their image if needed.
     '''
-    log('Initializing folder for j1-nbinteract.')
+    log('Initializing folder for nbinteract.')
     log()
 
     log('Checking to see if this folder is the root folder of a git project.')
@@ -238,7 +238,7 @@ def init():
     else:
         error(
             "This folder doesn't look like the root of a git project. "
-            "Please rerun j1-nbinteract init in the top-level folder of a "
+            "Please rerun nbinteract init in the top-level folder of a "
             "git project."
         )
         return ERROR
@@ -265,22 +265,22 @@ def init():
                 f.write(DEFAULT_REQUIREMENTS_TXT)
             log(
                 'Created requirements.txt. Edit this file now to include the '
-                'rest of your dependencies, then rerun j1-nbinteract init.'
+                'rest of your dependencies, then rerun nbinteract init.'
             )
             return SUCCESS
         else:
             log(
                 'Please manually create a requirements.txt file, then rerun '
-                'j1-nbinteract init.'
+                'nbinteract init.'
             )
             return SUCCESS
     log()
 
-    log('Generating .j1-nbinteract.json file...')
+    log('Generating .nbinteract.json file...')
     if os.path.isfile(CONFIG_FILE):
         log(
-            ".j1-nbinteract.json already exists, skipping generation. If you'd "
-            "like to regenerate the file, remove .j1-nbinteract.json and rerun "
+            ".nbinteract.json already exists, skipping generation. If you'd "
+            "like to regenerate the file, remove .nbinteract.json and rerun "
             "this command."
         )
         log()
@@ -306,14 +306,14 @@ def init():
         error(
             "Your project's origin remote {} doesn't look like a github "
             "URL. This may cause issues with Binder, so please double check "
-            "your .j1-nbinteract.json file after this script finishes. "
+            "your .nbinteract.json file after this script finishes. "
             "Continuing as planned..."
         )
 
     binder_spec = binder_spec_from_github_url(github_origin)
     with open(CONFIG_FILE, 'w', encoding='utf-8') as f:
         json.dump({'spec': binder_spec}, f, indent=4)
-    log('Created .j1-nbinteract.json file successfully')
+    log('Created .nbinteract.json file successfully')
     log()
 
     log(
@@ -330,8 +330,8 @@ def init():
 def check_arguments(arguments):
     if not arguments['--spec']:
         error(
-            '--spec flag not set and no .j1-nbinteract.json file found. Rerun '
-            'this command with the --spec flag or run `j1-nbinteract init` to '
+            '--spec flag not set and no .nbinteract.json file found. Rerun '
+            'this command with the --spec flag or run `nbinteract init` to '
             'resolve this issue.'
         )
         raise DocoptExit()
@@ -406,7 +406,7 @@ def init_exporter(extract_images, execute, **exporter_config):
     if execute:
         # Use the NbiExecutePreprocessor to correctly generate widget output
         # for interact() calls.
-        preprocessors.append('j1-nbinteract.preprocessors.NbiExecutePreprocessor')
+        preprocessors.append('nbinteract.preprocessors.NbiExecutePreprocessor')
 
     config.InteractExporter.preprocessors = preprocessors
 

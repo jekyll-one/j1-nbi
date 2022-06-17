@@ -1,7 +1,7 @@
 include LICENSE.txt
 include README.md
 include MANIFEST.in
-include Makefile
+# include Makefile
 
 exclude js
 exclude node_modules
@@ -13,4 +13,3 @@ global-exclude *.pyc
 global-exclude *.pyo
 global-exclude .git
 global-exclude .ipynb_checkpoints
-

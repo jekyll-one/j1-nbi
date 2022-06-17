@@ -1,0 +1,5 @@
+# YAPF - A code formatter for Python
+#
+
+[style]
+based_on_style = yapf

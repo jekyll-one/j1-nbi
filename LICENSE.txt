@@ -1,4 +1,7 @@
-The MIT License (j1-nbi)
+j1-nbinteract
+-------------
+
+The MIT License (J1)
 --------------------------------------------------------------------------------
 
 Copyright (C) 2022 Juergen Adams
@@ -21,6 +24,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+
+nbinteract
+----------
 
 BSD 3-Clause License (nbinteract)
 --------------------------------------------------------------------------------
