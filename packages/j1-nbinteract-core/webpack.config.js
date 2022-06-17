@@ -20,7 +20,7 @@ const config = {
     index: './src/index.js',
   },
   output: {
-    filename: 'nbinteract-core.js',
+    filename: 'j1-nbinteract-core.js',
     path: path.resolve(__dirname, 'lib'),
   },
   devtool: 'cheap-module-eval-source-map',

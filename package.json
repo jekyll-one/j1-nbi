@@ -5,8 +5,8 @@
     "description": "Export interactive HTML pages from Jupyter Notebooks for J1 Template",
     "scripts": {
         "build": "run-p -s build:*",
-        "build:nbinteract-py": "npm run clean:py && python setup.py bdist_wheel",
-        "build:nbinteract-core": "lerna run --scope nbinteract-core build",
+        "build:py": "npm run clean:py && python setup.py bdist_wheel",
+        "build:js": "lerna run --scope nbinteract-core build",
         "clean": "run-p -s clean:*",
         "clean:start": "echo Clean up project root files ..",
         "clean:py": "shx rm -rf dist && shx rm -rf build && shx rm -rf nbinteract.egg-info",
