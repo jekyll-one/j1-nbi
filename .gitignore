@@ -6,6 +6,9 @@ data/
 _unused/
 _support/
 
+# Tests (currently not implemented)
+tests/
+
 # Created by https://www.gitignore.io/api/osx,python
 
 ### OSX ###
@@ -45,6 +48,7 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+package-lock.json
 .Python
 env/
 build/

@@ -11,7 +11,7 @@
         "clean:start": "echo Clean up project root files ..",
         "clean:py": "shx rm -rf dist && shx rm -rf build && shx rm -rf nbinteract.egg-info",
         "clean:locks": "shx rm -f *.lock && shx rm -f package-lock.json",
-        "clean:logs": "shx rm -f install--local.log",
+        "clean:logs": "shx rm -f *.log",
         "clean:packages": "echo Clean up project packages .. && lerna run --parallel clean",
         "install--local": "echo Install nbinteract locally .. && pip install -e . 2>&1 > install--local.log && echo done.",
         "install--remote": "twine upload dist/*",
