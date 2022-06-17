@@ -1,8 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-  .BundleAnalyzerPlugin
 
 // Use the shim() function to stub out unneeded modules. Used to cut down
 // bundle size since tree-shaking doesn't work with Typescript modules.
@@ -51,10 +49,6 @@ const config = {
     shim(/@jupyterlab\/services\/lib\/(session|contents|terminal)\/.*/),
 
     new CleanWebpackPlugin(['lib']),
-    new BundleAnalyzerPlugin({
-      analyzerMode: 'static',
-      openAnalyzer: false,
-    }),
   ],
   module: {
     rules: [
