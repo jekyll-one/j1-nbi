@@ -1,13 +1,22 @@
 # Changelog
 
-This file contains the changes made for each version of `j1-nbi`. Since
-the package contains both a Python and a JavaScript component, we keep the
-version numbers for both Python and JS packages the same so updates are easier
-to keep track of.
+This file contains the changes made for each version of `j1-nbinteract` and
+the based module `nbinteract`.
 
-## master
+**NOTE**: Since the package contains both a Python and a JavaScript component,
+the version numbers for both Python and JS packages the same so updates are
+easier to keep track of.
 
-## 0.2.4
+
+## j1-nbinteract
+
+### 1.0.3
+
+Initial version
+
+## nbinteract
+
+### 0.2.4
 
 **JS**
 
@@ -15,7 +24,7 @@ to keep track of.
   `nbUrl` config option when initializing the `j1-nbi` object
   (https://github.com/SamLau95/j1-nbi/pull/102).
 
-## 0.2.3
+### 0.2.3
 
 **Python**
 
@@ -23,7 +32,7 @@ Bug fixes:
 
 - Fix bug in initialization script for repos with dashes in the name.
 
-## 0.2.2
+### 0.2.2
 
 **JS**
 
@@ -37,7 +46,7 @@ Bug fixes:
 
 - Require jinja2 version to be at least 2.10
 
-## 0.2.1
+### 0.2.1
 
 **JS**
 
@@ -52,7 +61,7 @@ Features:
 - When publishing, the branch name of the spec is now optional (defaults to
   `master`) (https://github.com/SamLau95/j1-nbi/pull/91).
 
-## 0.2.0
+### 0.2.0
 
 **JS**
 
@@ -66,7 +75,7 @@ Features:
 
 - Add layout flags (https://github.com/SamLau95/j1-nbi/pull/88)
 
-## 0.1.9
+### 0.1.9
 
 **JS**
 
@@ -85,7 +94,7 @@ Bug fixes:
 - Fixes unicode issue on Windows (https://github.com/SamLau95/j1-nbi/pull/84)
 - Fixes spec issue in publish method (https://github.com/SamLau95/j1-nbi/pull/85)
 
-## 0.1.8
+### 0.1.8
 
 **JS**
 
@@ -93,7 +102,7 @@ Bug fixes:
 
 - Fixes j1-nbi-core loading on unpkg.
 
-## 0.1.7
+### 0.1.7
 
 **Python**
 
@@ -101,7 +110,7 @@ Bug fixes:
 
 - Ensures template files are included in package
 
-## 0.1.6
+### 0.1.6
 
 **Python**
 
@@ -119,7 +128,7 @@ Features:
 
 - Errors in widget code get displayed in the status buttons.
 
-## 0.1.5
+### 0.1.5
 
 **Python**
 
@@ -127,7 +136,7 @@ Bug fixes:
 
 - Fixes error when some plotting functions are called.
 
-## 0.1.4
+### 0.1.4
 
 **Python**
 
@@ -141,7 +150,7 @@ Bug fixes:
 
 - Fixes errors from cells that don't have widget output.
 
-## 0.1.3
+### 0.1.3
 
 **Python**
 
@@ -164,7 +173,7 @@ Bug fixes:
 - Fixes `j1-nbi-core` so that loading it in a webpage initializes the
   j1-nbi variable properly.
 
-## 0.1.2
+### 0.1.2
 
 **Python**
 
@@ -187,7 +196,7 @@ Bug fixes:
 - Fixed an issue where lots of error message were getting logged to the console
   in the GitBook (https://github.com/SamLau95/j1-nbi/issues/41).
 
-## 0.1.1
+### 0.1.1
 
 **Python**
 
