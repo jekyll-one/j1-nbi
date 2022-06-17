@@ -1,7 +1,7 @@
 # j1-nbinteract
 
-[![PyPI](https://img.shields.io/pypi/v/nbinteract.svg)](https://pypi.python.org/pypi/j1-nbinteract/)
-[![NPM](https://img.shields.io/npm/v/nbinteract.svg)](https://www.npmjs.com/package/j1-nbinteract)
+<!-- [//]: # [![PyPI](https://img.shields.io/pypi/v/nbinteract.svg)](https://pypi.python.org/pypi/j1-nbinteract/) -->
+<!-- [//]: # [![NPM](https://img.shields.io/npm/v/nbinteract.svg)](https://www.npmjs.com/package/j1-nbinteract) -->
 
 The Python package `j1-nbinteract` is based on `nbinteract` **v0.2.6** but
 implements upgraded/modified Python packages for pip in `requirements.txt`:
