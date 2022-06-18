@@ -1,7 +1,7 @@
 {
     "private": true,
     "name": "nbinteract",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Export interactive HTML pages from Jupyter Notebooks for J1 Template",
     "scripts": {
         "build": "run-p -s build:*",
@@ -47,8 +47,8 @@
         "babel-core": "^6.26.0",
         "babel-loader": "8.0.0-beta.2",
         "babel-runtime": "^6.26.0",
-        "css-loader": "^0.28.4",
         "clean-webpack-plugin": "^4.0.0",
+        "css-loader": "^0.28.4",
         "file-loader": "^0.11.2",
         "fs-extra": "^0.30.0",
         "json-loader": "^0.5.4",

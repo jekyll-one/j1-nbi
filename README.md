@@ -14,11 +14,16 @@ implements upgraded/modified Python packages for pip in `requirements.txt`:
 #
 ipython>=6, <8
 ipywidgets>=7.5.0, <8
-traitlets>=4.3, <5
 toolz>=0.8, <1
 docopt>=0.6.2, <1
-nbformat>=4.4.0, <5
 numpy>=1, <2
+
+# More recent versions required by nbclient etc.
+#
+# nbformat>=4.4.0, <5
+nbformat>=5.0
+# traitlets>=4.3, <5
+traitlets>=5.0
 
 # Upgraded `bqplot` to make widgets usable in `Jupyter Lab`
 #
