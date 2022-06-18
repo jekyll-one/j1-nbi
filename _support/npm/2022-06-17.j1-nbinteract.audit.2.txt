@@ -1,0 +1,636 @@
+=== npm audit security report ===
+
+# Run  npm install --save-dev webpack@5.73.0  to resolve 1 vulnerability
+SEMVER WARNING: Recommended action is a potentially breaking change
+
+  High            Regular expression denial of service in glob-parent
+
+  Package         glob-parent
+
+  Dependency of   webpack [dev]
+
+  Path            webpack > watchpack > watchpack-chokidar2 > chokidar >
+                  glob-parent
+
+  More info       https://github.com/advisories/GHSA-ww39-953v-wcq6
+
+
+
+# Run  npm install --save-dev webpack-dev-server@4.9.2  to resolve 7 vulnerabilities
+SEMVER WARNING: Recommended action is a potentially breaking change
+
+  High            Regular expression denial of service in glob-parent
+
+  Package         glob-parent
+
+  Dependency of   webpack-dev-server [dev]
+
+  Path            webpack-dev-server > chokidar > glob-parent
+
+  More info       https://github.com/advisories/GHSA-ww39-953v-wcq6
+
+
+
+
+  Moderate        Open Redirect in node-forge
+
+  Package         node-forge
+
+  Dependency of   webpack-dev-server [dev]
+
+  Path            webpack-dev-server > selfsigned > node-forge
+
+  More info       https://github.com/advisories/GHSA-8fr3-hfg3-gpgp
+
+
+
+
+  Low             Prototype Pollution in node-forge debug API.
+
+  Package         node-forge
+
+  Dependency of   webpack-dev-server [dev]
+
+  Path            webpack-dev-server > selfsigned > node-forge
+
+  More info       https://github.com/advisories/GHSA-5rrq-pxf6-6jx5
+
+
+
+
+  Low             URL parsing in node-forge could lead to undesired behavior.
+
+  Package         node-forge
+
+  Dependency of   webpack-dev-server [dev]
+
+  Path            webpack-dev-server > selfsigned > node-forge
+
+  More info       https://github.com/advisories/GHSA-gf8q-jrpm-jvxq
+
+
+
+
+  Moderate        Improper Verification of Cryptographic Signature in
+                  `node-forge`
+
+  Package         node-forge
+
+  Dependency of   webpack-dev-server [dev]
+
+  Path            webpack-dev-server > selfsigned > node-forge
+
+  More info       https://github.com/advisories/GHSA-2r2c-g63r-vccr
+
+
+
+
+  High            Improper Verification of Cryptographic Signature in
+                  node-forge
+
+  Package         node-forge
+
+  Dependency of   webpack-dev-server [dev]
+
+  Path            webpack-dev-server > selfsigned > node-forge
+
+  More info       https://github.com/advisories/GHSA-x4jg-mjrx-434g
+
+
+
+
+  High            Improper Verification of Cryptographic Signature in
+                  node-forge
+
+  Package         node-forge
+
+  Dependency of   webpack-dev-server [dev]
+
+  Path            webpack-dev-server > selfsigned > node-forge
+
+  More info       https://github.com/advisories/GHSA-cfm4-qjh2-4765
+
+
+
+# Run  npm install --save-dev css-loader@6.7.1  to resolve 5 vulnerabilities
+SEMVER WARNING: Recommended action is a potentially breaking change
+
+  High            ReDOS in IS-SVG
+
+  Package         is-svg
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-svgo > is-svg
+
+  More info       https://github.com/advisories/GHSA-r8j5-h5cx-65gg
+
+
+
+
+  Moderate        Regular Expression Denial of Service (ReDOS)
+
+  Package         color-string
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-colormin > colormin > color >
+                  color-string
+
+  More info       https://github.com/advisories/GHSA-257v-vj4p-3w2h
+
+
+
+
+  High            Regular Expression Denial of Service (ReDoS)
+
+  Package         is-svg
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-svgo > is-svg
+
+  More info       https://github.com/advisories/GHSA-7r28-3m3f-r2pr
+
+
+
+
+  Moderate        Denial of Service in js-yaml
+
+  Package         js-yaml
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-svgo > svgo > js-yaml
+
+  More info       https://github.com/advisories/GHSA-2pr6-76vf-7546
+
+
+
+
+  High            Code Injection in js-yaml
+
+  Package         js-yaml
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-svgo > svgo > js-yaml
+
+  More info       https://github.com/advisories/GHSA-8j8c-7jfh-h6hx
+
+
+
+# Run  npm install --save-dev style-loader@3.3.1  to resolve 1 vulnerability
+SEMVER WARNING: Recommended action is a potentially breaking change
+
+  Moderate        Prototype Pollution in Ajv
+
+  Package         ajv
+
+  Dependency of   style-loader [dev]
+
+  Path            style-loader > schema-utils > ajv
+
+  More info       https://github.com/advisories/GHSA-v88g-cgmw-v5xw
+
+
+
+# Run  npm install --save-dev webpack-bundle-analyzer@4.5.0  to resolve 2 vulnerabilities
+SEMVER WARNING: Recommended action is a potentially breaking change
+
+  Moderate        Cross-Site Scripting in webpack-bundle-analyzer
+
+  Package         webpack-bundle-analyzer
+
+  Dependency of   webpack-bundle-analyzer [dev]
+
+  Path            webpack-bundle-analyzer
+
+  More info       https://github.com/advisories/GHSA-pgr8-jg6h-8gw6
+
+
+
+
+  Critical        Template injection in ejs
+
+  Package         ejs
+
+  Dependency of   webpack-bundle-analyzer [dev]
+
+  Path            webpack-bundle-analyzer > ejs
+
+  More info       https://github.com/advisories/GHSA-phwq-j96m-2c2q
+
+
+
+# Run  npm install --save-dev url-loader@4.1.1  to resolve 1 vulnerability
+SEMVER WARNING: Recommended action is a potentially breaking change
+
+  Moderate        Regular Expression Denial of Service in mime
+
+  Package         mime
+
+  Dependency of   url-loader [dev]
+
+  Path            url-loader > mime
+
+  More info       https://github.com/advisories/GHSA-wrvr-8mpx-r7pp
+
+
+
+# Run  npm install --save-dev postcss@8.4.14  to resolve 1 vulnerability
+SEMVER WARNING: Recommended action is a potentially breaking change
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   postcss [dev]
+
+  Path            postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+# Run  npm update css-loader --depth 1  to resolve 29 vulnerabilities
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > autoprefixer > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-calc > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-colormin > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-convert-values > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-discard-comments > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-discard-duplicates > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-discard-empty > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-discard-overridden > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-discard-unused > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-filter-plugins > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-merge-idents > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-merge-longhand > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-merge-rules > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-minify-font-values > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-minify-gradients > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-minify-params > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-minify-selectors > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-normalize-charset > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-normalize-url > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-ordered-values > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-reduce-idents > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-reduce-initial > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-reduce-transforms > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-svgo > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-unique-selectors > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > cssnano > postcss-zindex > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > icss-utils > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+
+  Moderate        Regular Expression Denial of Service in postcss
+
+  Package         postcss
+
+  Dependency of   css-loader [dev]
+
+  Path            css-loader > postcss
+
+  More info       https://github.com/advisories/GHSA-566m-qj78-rww5
+
+
+
+found 47 vulnerabilities (2 low, 37 moderate, 7 high, 1 critical) in 1826 scanned packages
+  run `npm audit fix` to fix 29 of them.
+  18 vulnerabilities require semver-major dependency updates.

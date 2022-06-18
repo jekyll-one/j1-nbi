@@ -1,7 +1,7 @@
 {
     "private": true,
     "name": "nbinteract",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Export interactive HTML pages from Jupyter Notebooks for J1 Template",
     "scripts": {
         "build": "run-p -s build:*",
@@ -11,9 +11,9 @@
         "clean:start": "echo Clean up project root files ..",
         "clean:py": "shx rm -rf dist && shx rm -rf build && shx rm -rf nbinteract.egg-info",
         "clean:locks": "shx rm -f *.lock && shx rm -f package-lock.json",
-        "clean:logs": "shx rm -f *.log",
+        "clean:logs": "shx rm -f *.log && shx rm -f stats.json",
         "clean:packages": "echo Clean up project packages .. && lerna run --parallel clean",
-        "install--local": "echo Install nbinteract locally .. && pip install -e . 2>&1 > install--local.log && echo done.",
+        "install--local": "pip install -e . 2>&1 > install--local.log && shx tail -n 7 install--local.log",
         "install--remote": "twine upload dist/*",
         "reset": "run-s -s reset:*",
         "reset:start": "echo Reset development system to factory state ..",
@@ -27,6 +27,17 @@
         "setup:node-modules": "echo Bootstrap NodeJS project modules .. && echo J1 Project modules: >> install.log && npm install --silent >> install.log && echo done.",
         "setup:lerna": "echo Initialize NodeJS modules for all development packages .. && lerna init && lerna bootstrap && echo done."
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jekyll-one/j1-nbinteract.git"
+    },
+    "keywords": [
+        "J1 Template",
+        "Jekyll",
+        "jupyter",
+        "notebook",
+        "python"
+    ],
     "devDependencies": {
         "@babel/core": "^7.0.0-beta.39",
         "@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.39",
@@ -36,12 +47,11 @@
         "babel-core": "^6.26.0",
         "babel-loader": "8.0.0-beta.2",
         "babel-runtime": "^6.26.0",
-        "clean-webpack-plugin": "^0.1.19",
         "css-loader": "^0.28.4",
+        "clean-webpack-plugin": "^4.0.0",
         "file-loader": "^0.11.2",
         "fs-extra": "^0.30.0",
         "json-loader": "^0.5.4",
-        "lerna": "^3.22.1",
         "postcss": "^6.0.2",
         "prettier": "^1.6.1",
         "schema-utils": "^0.4.3",
@@ -57,6 +67,7 @@
         "core-js": "^2.6.12",
         "cross-env": "^7.0.3",
         "cross-var": "^1.1.0",
+        "lerna": "^5.1.4",
         "npm-run-all": "^4.1.5",
         "rimraf": "^3.0.2",
         "shx": "^0.3.4"

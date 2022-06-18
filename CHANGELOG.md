@@ -10,7 +10,7 @@ easier to keep track of.
 
 ## j1-nbinteract
 
-### 1.0.3
+### 1.0.4
 
 Initial version
 

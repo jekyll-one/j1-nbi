@@ -4,7 +4,6 @@ data/
 
 # Private files
 _unused/
-_support/
 
 # Tests (currently not implemented)
 tests/
