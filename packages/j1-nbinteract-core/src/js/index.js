@@ -1,5 +1,6 @@
 import '@babel/polyfill'
 import '../css/bqplot.css'
+import '../css/widgets.css'
 
 import NbInteract from './NbInteract'
 

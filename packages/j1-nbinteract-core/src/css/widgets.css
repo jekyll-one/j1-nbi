@@ -6,7 +6,12 @@
  * This example shows how to customize the theming and still compile the CSS
  * down to something that all browsers support
  */
-@import "@jupyter-widgets/controls/css/widgets.css";
+@import "~@jupyter-widgets/controls/css/labvariables.css";
+
+/* Base Style/CSS style overwrites for J1 Template (General Button Styling)
+-------------------------------------------------------------------------------- */
+@import "./jupyter-widgets-base.css";
+
 :root {
     --jp-widgets-border-width: 2px;
 }
@@ -33,5 +38,5 @@
   /* taken from bootstrap/extensions/mde/_elevation.scss,
      raised level 5 (raised-z5)
   */
-  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12); }
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
 }
