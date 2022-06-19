@@ -11,7 +11,7 @@
     "clean:logs": "shx rm -f stats-prod.json && shx rm -f stats.json",
     "test": "echo \"Error: no tests available\" && exit 1",
     "build": "cross-var webpack --mode production --no-color --config $npm_package_wp_build --devtool source-map",
-    "watch": "webpack --watch",
+    "watch": "cross-var webpack --no-color --config $npm_package_wp_build webpack --watch",
     "serve": "webpack-dev-server --open",
     "stats": "run-s -s stats:*",
     "stats:dev": "echo Create WP Dev Stats in file: stats.json && cross-var webpack --mode production --config $npm_package_wp_build --profile --json > stats.json"

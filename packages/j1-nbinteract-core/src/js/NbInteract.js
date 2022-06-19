@@ -336,7 +336,7 @@ export default class NbInteract {
     try {
       const { url, token } = await this.binder.startServer()
 
-      // Connect to the notebook webserver.
+      // Connect to the notebook webserver
       const serverSettings = ServerConnection.makeSettings({
         baseUrl: url,
         wsUrl: util.baseToWsUrl(url),
