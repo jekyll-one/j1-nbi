@@ -1,5 +1,5 @@
 {
-  "name": "nbinteract-core",
+  "name": "j1-nbinteract-core",
   "version": "1.0.7",
   "description": "Support interactive HTML pages from Jupyter Notebooks for J1 Template",
   "main": "lib/j1-nbinteract-core.js",
