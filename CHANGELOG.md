@@ -12,7 +12,7 @@ easier to keep track of.
 
 ### 1.0.6
 
-Initial version
+Initial version.
 
 ## nbinteract
 
