@@ -3,7 +3,7 @@ built/
 data/
 
 # Private files
-_unused/
+
 
 # Files from  j1-nbinteract-core
 packages/j1-nbinteract-core/stat*.json

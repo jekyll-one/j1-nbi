@@ -1,0 +1,66 @@
+{
+  "name": "nbinteract-core",
+  "version": "1.0.5",
+  "description": "Support interactive HTML pages from Jupyter Notebooks for J1 Template",
+  "main": "lib/j1-nbinteract-core.js",
+  "module": "src/index.js",
+  "scripts": {
+    "clean": "run-p -s clean:*",
+    "clean:lib": "rimraf lib/*",
+    "clean:locks": "shx rm -f *.lock && shx rm -f package-lock.json",
+    "clean:logs": "shx rm -f stats-prod.json && shx rm -f stats.json",
+    "test": "echo \"Error: no tests available\" && exit 1",
+    "build": "cross-var webpack --mode production --no-color --config $npm_package_wp_build --devtool source-map",
+    "watch": "cross-var webpack --no-color --config $npm_package_wp_build webpack --watch",
+    "serve": "webpack-dev-server --open",
+    "stats": "run-s -s stats:*",
+    "stats:dev": "echo Create WP Dev Stats in file: stats.json && cross-var webpack --mode production --config $npm_package_wp_build --profile --json > stats.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jekyll-one/j1-nbinteract.git"
+  },
+  "wp": {
+    "progress": "--progress",
+    "build": "wp4_configs/webpack.config.js"
+  },
+  "keywords": [
+    "J1 Template",
+    "Jekyll",
+    "jupyter",
+    "notebook",
+    "html",
+    "static",
+    "web",
+    "interactive",
+    "widgets"
+  ],
+  "author": "Juergen Adams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jekyll-one/j1-nbinteract/issues"
+  },
+  "dependencies": {
+    "@jupyter-widgets/base": "^1.1.8",
+    "@jupyter-widgets/controls": "^1.1.5",
+    "@jupyter-widgets/html-manager": "^0.11.9",
+    "@jupyter-widgets/output": "^1.0.15",
+    "@jupyterlab/services": "^1.1.2",
+    "bqplot": "^0.4",
+    "core-js": "3",
+    "lodash.once": "^4.1.1",
+    "log4javascript": "^1.4.16"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "cross-var": "^1.1.0",
+    "lodash.debounce": "^4.0.8",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "shx": "^0.3.4",
+    "webpack": "^4.0.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.1"
+  }
+}

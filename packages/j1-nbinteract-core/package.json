@@ -46,7 +46,7 @@
     "@jupyter-widgets/html-manager": "^0.11.9",
     "@jupyter-widgets/output": "^1.0.15",
     "@jupyterlab/services": "^1.1.2",
-    "bqplot": "^0.4",
+    "bqplot": "0.4.9",
     "core-js": "3",
     "lodash.once": "^4.1.1",
     "log4javascript": "^1.4.16"

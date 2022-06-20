@@ -1,0 +1,44 @@
+/* Copyright (c) Jupyter Development Team.
+ * Distributed under the terms of the Modified BSD License
+ */
+
+/*
+ * This example shows how to customize the theming and still compile the CSS
+ * down to something that all browsers support
+ */
+/* @import "~@jupyter-widgets/controls/css/labvariables.css"; */
+
+/* Base Style/CSS style overwrites for J1 Template (General Button Styling)
+-------------------------------------------------------------------------------- */
+/* @import "./jupyter-widgets-base.css"; */
+
+@import "~@jupyter-widgets/controls/css/widgets.css";
+:root {
+    --jp-widgets-border-width: 2px;
+    --j1-layout-background-color: #BDBDBD;
+}
+
+/**
+ * This prevents double prompt margins for widgets
+ */
+.jp-OutputPrompt {
+  display: none;
+}
+
+
+/*
+ * General Button Styling Overwrites for J1 Template
+ */
+
+/* jadams, 2022-06-15: darken background because body color changed */
+.jupyter-button {
+  background-color: var(--j1-layout-background-color);
+}
+
+/* jadams, 2022-06-15: adjusted :hover */
+/* taken from bootstrap/extensions/mde/_elevation.scss,
+   raised level 5 (raised-z5)
+*/
+.jupyter-button:hover:enabled, .jupyter-button:focus:enabled {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+}
