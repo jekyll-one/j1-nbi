@@ -18,16 +18,20 @@ toolz>=0.8, <1
 docopt>=0.6.2, <1
 numpy>=1, <2
 
-# More recent versions required by nbclient etc.
+# More recent versions required by e.g. nbclient
 #
-# nbformat>=4.4.0, <5
+# nbformat>=4.4.0, <5, traitlets>=4.3, <5
 nbformat>=5.0
-# traitlets>=4.3, <5
 traitlets>=5.0
 
-# Upgraded `bqplot` to make widgets usable in `Jupyter Lab`
+# Recent version of `bqplot` for Jupyter `Notebook v7` (JupyterLab)
+# NOTE: currently NOT supported for j1-nbinteract v1.x
 #
-bqplot>=0.12, <0.13
+# bqplot>=0.12
+
+# Pinned version of `bqplot` for Jupyter `Notebook v6` (Classic Notebook)
+#
+bqplot==0.11.9
 
 # Upgraded/Pinned to `Jinja2` latest that support func `contextfilter`
 #

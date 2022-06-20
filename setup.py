@@ -16,7 +16,7 @@ import sys
 
 # Package version
 #
-version = '1.0.6'
+version = '1.0.7'
 here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the README file
