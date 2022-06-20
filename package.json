@@ -1,7 +1,7 @@
 {
     "private": true,
     "name": "nbinteract",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Export interactive HTML pages from Jupyter Notebooks for J1 Template",
     "scripts": {
         "build": "run-p -s build:*",
@@ -25,7 +25,11 @@
         "setup-base-nodejs": "echo Bootstrap NodeJS base modules .. && echo J1 Project Base modules: > install.log && npm install --silent rimraf shx npm-run-all cross-var cross-env >> install.log && echo done.",
         "setup-base:py": "echo Bootstrap Python base modules .. && python -m pip install twine && echo done.",
         "setup:node-modules": "echo Bootstrap NodeJS project modules .. && echo J1 Project modules: >> install.log && npm install --silent >> install.log && echo done.",
-        "setup:lerna": "echo Initialize NodeJS modules for all development packages .. && lerna init && lerna bootstrap && echo done."
+        "setup:lerna": "echo Initialize NodeJS modules for all development packages .. && lerna init && lerna bootstrap && echo done.",
+        "postsetup": "run-s -s patch:*",
+        "patch:pre-msg": "echo Processing required patches for the development system ..",
+        "patch:d3": "echo .. apply required d3.js patches for nbinterct-core && shx rm -f ./packages/j1-nbinteract-core/node_modules/d3/d3.js && shx cp ./packages/j1-nbinteract-core/patches/d3.fake.errors.js ./packages/j1-nbinteract-core/node_modules/d3/d3.js",
+        "patch:post-msg": "echo Processing required patches done."
     },
     "repository": {
         "type": "git",

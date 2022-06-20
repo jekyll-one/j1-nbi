@@ -1,3 +1,22 @@
+/*
+ # -----------------------------------------------------------------------------
+ # d3.js v3.5.17
+ # MODIFIED D3 JS for J1 Template
+ # Fake errors from current bqplot version used by j1-nbinteract-core
+ #
+ # Product/Info:
+ # https://d3js.org
+ # https://jekyll.one
+ #
+ # Copyright (c) 2010-2022 Mike Bostock
+ # Copyright (C) 2022 Juergen Adams
+ #
+ # d3 is licensed under the ISC License.
+ # See: https://github.com/d3/d3/blob/main/LICENSE
+ # J1 Template is licensed under the MIT License.
+ # See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
+ # -----------------------------------------------------------------------------
+*/
 !function() {
   var d3 = {
     version: "3.5.17"

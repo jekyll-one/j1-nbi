@@ -106,11 +106,11 @@ Use the “git tag” command with the “-d” option
 
 == From local
 
-  git tag -d v1.0.5
+  git tag -d v1.0.6
 
 === From remote
 
-git push -d origin v1.0.5
+git push -d origin v1.0.6
 
 
 == Set a Git tag
@@ -118,7 +118,7 @@ git push -d origin v1.0.5
 # When modifying remember to issue a new tag command in git before committing,
 # then push the new tag
 #
-# git tag -a v1.0.5 -m "v1.0.5"
+# git tag -a v1.0.6 -m "v1.0.6"
   git push origin --tags
 
 == Update Git Index (cache) completely
@@ -142,9 +142,9 @@ or forced
 Then:
 
   git commit -am "Cleanup files"
-  git commit -am "New version 1.0.5"
-  git commit -am "Prepare new version 1.0.5"
-  git commit -am "Latest files of version 1.0.5"
+  git commit -am "New version 1.0.6"
+  git commit -am "Prepare new version 1.0.6"
+  git commit -am "Latest files of version 1.0.6"
 
 == Add file permissions on Windows
 

@@ -42,7 +42,7 @@
     "fs": "0.0.1-security",
     "if-env": "^1.0.4",
     "js-yaml": "^4.0",
-    "lite-url": "^1.0.5",
+    "lite-url": "^1.0.6",
     "log4js": "^6.3.0",
     "moment": "^2.24.0",
     "node-cron": "^3.0.0",
